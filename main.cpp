@@ -38,7 +38,7 @@ void imprimirLinea(Punto p1, Punto p2) {
     for (float i = primero.x; i < segundo.x; i+=0.1) {
         x.push_back(i);
         y.push_back(yAux);
-        yAux += pendienteY;
+        yAux += pendienteMenorPaso;
     }
 
     for (int j = 0; j < x.size(); j++) {
