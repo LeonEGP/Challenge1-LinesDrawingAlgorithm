@@ -15,7 +15,7 @@ void imprimirLinea(Punto p1, Punto p2) {
     vector <float> y;
     Punto primero;
     Punto segundo;
-    float pendiente;
+    int pendiente;
 
     if (p1.x < p2.x) {
         primero = p1;
@@ -31,14 +31,12 @@ void imprimirLinea(Punto p1, Punto p2) {
 
     pendiente = discriminante1 / discriminante2;
 
-    float pendienteMenorPaso = pendiente / 10.00;
-
     float yAux = primero.y;
 
-    for (float i = primero.x; i < segundo.x; i+=0.1) {
+    for (float i = primero.x; i <= segundo.x; i++) {
         x.push_back(i);
         y.push_back(yAux);
-        yAux += pendienteMenorPaso;
+        yAux += pendiente;
     }
 
     for (int j = 0; j < x.size(); j++) {
@@ -56,6 +54,8 @@ int main() {
     cin >> p1.y;
     cin >> p2.x;
     cin >> p2.y;
+
+    cout << endl;
 
     imprimirLinea(p1, p2);
 
