@@ -32,7 +32,7 @@ void imprimirLinea(Punto p1, Punto p2) {
 
     pendiente = discriminante1 / discriminante2;
 
-    float pendienteY = pendiente / 10.00;
+    float pendienteMenorPaso = pendiente / 10.00;
 
     float yAux = primero.y;
 
