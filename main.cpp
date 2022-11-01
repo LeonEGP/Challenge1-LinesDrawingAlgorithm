@@ -13,7 +13,6 @@ void imprimirLinea(Punto p1, Punto p2) {
 
     vector <float> x;
     vector <float> y;
-
     Punto primero;
     Punto segundo;
     float pendiente;
